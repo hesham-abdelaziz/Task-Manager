@@ -1,0 +1,128 @@
+
+:host{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.container{
+    position: relative;
+    padding: 20px;
+    background-color: #354259;
+    width: 250px;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 0 5px 0 0 #44A0A0;
+}
+
+
+@media screen and (max-width : 768px) {
+    .container{
+        width: 450px;
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+}
+
+
+ul {
+    margin-top: 8px;
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    position: relative;
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px auto;
+    border-radius: 5px;
+}
+
+@media screen and (max-width : 768px) {
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    ul li {
+        margin: 2px 2px 8px 2px;
+    }
+}
+
+
+
+.category-modal {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: #354259;
+    border-radius: 5px;
+    z-index: 105;
+}
+
+@media screen and (max-width : 768px) {
+    .category-modal {
+        width: 350px !important;
+    }
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+mat-form-field label {
+    color: #fff !important;
+}
+
+
+.category-list .header {
+    position: relative;
+}
+.category-list .header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    left: -86px;
+    bottom: 8px;
+}
+.category-list .header::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    right: -86px;
+    bottom: 8px;
+}
+
+.category-list .delete {
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    cursor: pointer;
+}
+
+.category-list .delete mat-icon{
+    height: 20px !important;
+    width: 20px !important;
+    font-size: 20px !important;
+}
+
+
+.btnHolder {
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+}

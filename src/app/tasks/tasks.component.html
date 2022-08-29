@@ -1,0 +1,25 @@
+<div class="tasks">
+    <h4 class="text-center p-2" *ngIf="tasks.length  == 0">No Tasks Added!</h4>
+    <ul>
+        <li *ngFor="let task of tasks">
+            <mat-checkbox class="example-margin" color="primary" (change)="toggleCompleted(task.id)" [checked]="task.completed" >
+                {{task.title}}
+            </mat-checkbox>
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item *ngFor="let category of categories">
+                    <mat-icon>error_outline</mat-icon>
+                  <span>Mark as {{category.name}}</span>
+                </button>
+                <button mat-menu-item (click)="deleteTask(task.id)">
+                  <mat-icon>delete</mat-icon>
+                  <span>Delete</span>
+                </button>
+              </mat-menu>
+              <span class="date">{{task.date | date}}</span>
+            
+        </li>
+    </ul>
+</div>

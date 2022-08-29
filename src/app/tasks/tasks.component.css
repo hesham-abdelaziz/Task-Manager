@@ -1,0 +1,25 @@
+.tasks {
+padding: 10px;
+border-radius: 5px;
+background-color: #354259;
+box-shadow: 0 5px 0 0 #44A0A0;
+}
+
+
+ul li {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    padding: 12px 0 ;
+}
+
+
+span.date{
+    position: absolute;
+    bottom: 0;
+    left: 24px;
+    font-size: 12px;
+    user-select: none;
+}
